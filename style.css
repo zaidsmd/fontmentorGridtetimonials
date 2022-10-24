@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;400;500;600&display=swap');
+
+:root {
+    --bg-color: #ECF2F8;
+    --white-color: #fff;
+    --primary-color: #733FC8;
+    --secondary-color: #48556A;
+    --tertiary-color: #19202D;
+    --lightest-gray-color: #CFCFCF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white-color);
+    background-color: var(--bg-color);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 3% 0;
+}
+
+.card {
+    padding: 2rem;
+    border-radius: 10px;
+    color: var(--white-color);
+    box-shadow: 10px 14px 30px -20px rgba(0, 0, 0, 0.78);
+    transition: box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3em;
+}
+
+.card-head {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.img img {
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+}
+
+.name-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.name {
+    font-size: 1.3em;
+}
+
+.strong {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.disabled {
+    color: var(--lightest-gray-color);
+    line-height: 1.6;
+    font-size: 0.86em;
+}
+
+.quote {
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--lightest-gray-color);
+    font-size: 1.1em;
+}
+
+.card1 {
+    background-color: var(--primary-color);
+    background-image: url(/images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 85% 0;
+    background-size: 7rem;
+}
+
+.card2 {
+    background-color: var(--secondary-color);
+}
+
+.card3, .card4 {
+    background-color: var(--white-color);
+    color: #000000;
+}
+
+.card3 .quote, .card4 .quote {
+    color: #000000;
+    opacity: 60%;
+}
+
+
+.card5 {
+    background-color: var(--tertiary-color);
+}
+
+.container {
+    display: grid;
+    gap: 1.4em;
+    width: 75%;
+    box-sizing: border-box;
+    margin-bottom: 3%;
+}
+
+.attribution {
+    color: #19202D;
+
+}
+
+.attribution a {
+    color: var(--primary-color);
+
+}
+
+@media screen  and (min-width: 103em) {
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card3 {
+        grid-row: span 2;
+    }
+
+    .card5, .card1 {
+        grid-column: span 2;
+    }
+}
