@@ -129,19 +129,59 @@ body {
 
 .attribution a {
     color: var(--primary-color);
+}
 
+
+.card1 {
+    grid-area: one;
+}
+
+.card2 {
+    grid-area: two;
+}
+
+.card3 {
+    grid-area: five;
+}
+
+.card4 {
+    grid-area: three;
+}
+
+.card5 {
+    grid-area: four;
 }
 
 @media screen  and (min-width: 103em) {
     .container {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 'one one two five' 'three four four five ';
+        grid-auto-columns: 1fr;
+
+    }
+}
+
+@media only screen  and (max-width: 103em) {
+    .container {
+        grid-template-areas:
+                'one one'
+                'two five'
+                'three five '
+                'four four';
+        grid-auto-columns: 1fr;
+
+    }
+}
+
+@media only screen and (max-width: 70em) {
+    .container {
+        grid-template-areas:
+                'one'
+                'two'
+                'three'
+                'four'
+                'five';
+        grid-auto-columns: 1fr;
+
     }
 
-    .card3 {
-        grid-row: span 2;
-    }
-
-    .card5, .card1 {
-        grid-column: span 2;
-    }
 }
